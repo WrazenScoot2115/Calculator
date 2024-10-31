@@ -10,8 +10,8 @@
     <script>
         document.write('Witam w kalkulatorze!');
 
-        const number1 = parseInt(prompt('Wprowadź pierwszą liczbę:'))
-        const number2 = parseInt(prompt('Wprowadź drugą liczbę:'))
+        let number1 = parseInt(prompt('Wprowadź pierwszą liczbę:'))
+        let number2 = parseInt(prompt('Wprowadź drugą liczbę:'))
 
         if(isNaN(number1))  {
             document.write('Wpisz poprawnie pierwszą liczbę');
@@ -20,23 +20,24 @@
             document.write('Wpisz poprawnie drugą liczbę');
         }
         
+        let znak = (prompt('Wprowadź znak:'))
+
+        if (znak == '+') 
+        {
+            document.write('<p>Wynik:'+(number1 + number2)+'<p>');
+        }
+        else if (znak == '-')
+        {
+            document.write('<p>Wynik:'+(number1 - number2)+'<p>');
+        }
+        else if (znak == '*') 
+        {
+            document.write('<p>Wynik:'+(number1 * number2)+'<p>');
+        }
+        else if (znak == '/') 
+        {
+            document.write('<p>Wynik:'+(number1 / number2)+'<p>');
+        }
     </script>
 </body> 
 </html>
-function calculator(operator, num1, num2) {
-    if (operator === '+') {
-      return num1 + num2;
-    } else if (operator === '-') {
-      return num1 - num2;
-    } else if (operator === '*') {
-      return num1 * num2;
-    } else if (operator === '/') {
-      return num1 / num2;
-    } else {
-      return 'Nieprawidłowy operator';
-    }
-  }
-  
-  // Przykład użycia:
-  let result = calculator('+', 5, 3);
-  console.log(result); // 8
