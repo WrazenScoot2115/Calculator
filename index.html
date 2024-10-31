@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Podstawy JS - Kalkulator</h1>
+    </header>
+    <script>
+        document.write('Hello World!');
+
+        const number1 = parseInt(prompt('Wprowadź pierwszą liczbę:'))
+        const number2 = parseInt(prompt('Wprowadź drugą liczbę:'))
+
+        if(isNaN(number1))  {
+            document.write('Wpisz poprawnie pierwszą liczbę');
+        } 
+        else if(isNaN(number2)) {
+            document.write('Wpisz poprawnie drugą liczbę');
+        } 
+        if (operator === '+') {
+            return num1 + num2;
+            } else if (operator === '-') {
+            return num1 - num2;
+            } else if (operator === '*') {
+              return num1 * num2;
+        } else if (operator === '/') {
+          return num1 / num2;
+        } else {
+        return 'Nieprawidłowy operator';
+        }
+    </script>
+</body> 
+</html>
+function calculator(operator, num1, num2) {
+    if (operator === '+') {
+      return num1 + num2;
+    } else if (operator === '-') {
+      return num1 - num2;
+    } else if (operator === '*') {
+      return num1 * num2;
+    } else if (operator === '/') {
+      return num1 / num2;
+    } else {
+      return 'Nieprawidłowy operator';
+    }
+  }
+  
+  // Przykład użycia:
+  let result = calculator('+', 5, 3);
+  console.log(result); // 8
